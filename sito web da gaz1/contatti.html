@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti | Osteria da Gaz</title>
+    <meta name="description"
+        content="Prenota il tuo tavolo all'Osteria da Gaz. Siamo aperti a pranzo e cena. Contattaci per info ed eventi.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://osteriadagaz.it/contatti.html">
+    <meta property="og:title" content="Contatti e Prenotazioni | Osteria da Gaz">
+    <meta property="og:description" content="Prenota il tuo tavolo per un'esperienza indimenticabile.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://osteriadagaz.it/contatti.html">
+    <meta property="twitter:title" content="Contatti e Prenotazioni | Osteria da Gaz">
+    <meta property="twitter:description" content="Prenota il tuo tavolo per un'esperienza indimenticabile.">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Principale -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Stili specifici per la pagina contatti */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        form {
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .map-container {
+            height: 100%;
+            min-height: 400px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0e0e0;
+            color: #666;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGAZIONE -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Osteria <span>da Gaz</span></a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Il Menù</a></li>
+                    <li><a href="contatti.html" class="active">Contatti e Prenotazioni</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- INTESTAZIONE PAGINA -->
+    <section class="hero"
+        style="height: 40vh; background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="container hero-content">
+            <h1>Contattaci</h1>
+            <p>Prenota il tuo tavolo o vieni a trovarci</p>
+        </div>
+    </section>
+
+    <!-- CONTENUTO CONTATTI -->
+    <section class="about" style="background-color: var(--bg-color);">
+        <div class="container">
+
+            <div class="contact-grid">
+                <!-- FORM DI PRENOTAZIONE -->
+                <div>
+                    <h2 class="section-title" style="text-align: left; font-size: 2rem;">Richiedi Prenotazione</h2>
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" id="name" name="name" required placeholder="Mario Rossi">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="mario@esempio.it">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+39 ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="persons">Numero di Persone</label>
+                            <select id="persons" name="persons">
+                                <option value="1">1 Persona</option>
+                                <option value="2" selected>2 Persone</option>
+                                <option value="3">3 Persone</option>
+                                <option value="4">4 Persone</option>
+                                <option value="5+">5+ Persone</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Data</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Note Speciali (Allergie, Eventi, ecc.)</label>
+                            <textarea id="message" name="message" placeholder="Scrivi qui..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Invia
+                            Richiesta</button>
+                    </form>
+                </div>
+
+                <!-- INFO E MAPPA -->
+                <div>
+                    <h2 class="section-title" style="text-align: left; font-size: 2rem;">Dove Siamo</h2>
+                    <div style="margin-bottom: 30px;">
+                        <p><strong>Indirizzo:</strong> Via del Mare, 12, Città</p>
+                        <p><strong>Email:</strong> info@osteriadagaz.it</p>
+                        <p><strong>Telefono:</strong> +39 012 345 6789</p>
+                        <br>
+                        <p>Il locale è situato sul lungomare, a pochi passi dal porto turistico. Ampio parcheggio
+                            disponibile nelle vicinanze.</p>
+                    </div>
+
+                    <div class="map-container">
+                        <!-- Placeholder Mappa Google - Per inserire la mappa vera, sostituisci questo div con l'iframe di Google Maps -->
+                        <div class="map-placeholder">
+                            Mappa Google<br>(Inserisci qui il tuo iframe di Google Maps)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Osteria da Gaz</h4>
+                    <p>La vera cucina di pesce,</br>elegante e moderna.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contatti</h4>
+                    <p>Via del Mare, 12, Città</p>
+                    <p>Tel: <a href="tel:+390123456789">+39 012 345 6789</a></p>
+                    <p>Email: <a href="mailto:info@osteriadagaz.it">info@osteriadagaz.it</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Orari</h4>
+                    <p>Lun - Sab: 12:00 - 15:00 | 19:30 - 23:00</p>
+                    <p>Domenica: Chiuso</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Osteria da Gaz. Tutti i diritti riservati.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

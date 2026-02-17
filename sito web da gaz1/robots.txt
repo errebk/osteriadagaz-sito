@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://osteriadagaz.it/sitemap.xml
