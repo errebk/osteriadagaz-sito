@@ -1,5 +1,5 @@
 /**
- * OSTERIA DA GAZ - SCRIPT PRINCIPALE
+ * LA PERLA DEL MARE - SCRIPT PRINCIPALE
  * Gestisce l'interattività di base del sito (es. menu mobile).
  */
 
@@ -32,5 +32,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    console.log("Osteria da Gaz - Sito caricato correttamente.");
+    console.log("La Perla del Mare - Sito caricato correttamente.");
 });

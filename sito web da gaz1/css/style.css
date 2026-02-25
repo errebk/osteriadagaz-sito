@@ -1,5 +1,5 @@
 /* 
- * OSTERIA DA GAZ - STILE PRINCIPALE
+ * LA PERLA DEL MARE - STILE PRINCIPALE
  * =================================
  * Questo file contiene tutti gli stili del sito web.
  * Puoi modificare i colori e i font nella sezione :root qui sotto.
@@ -177,7 +177,7 @@ nav a.active {
 /* --- HERO SECTION (Intro) --- */
 .hero {
     height: 80vh;
-    background-image: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)),url('https://www.lavecchiaosteriatotu.it/wp-content/uploads/2023/09/i-primi-piatti-a-base-di-pesce.jpg');
+    background-image: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1920&auto=format&fit=crop');
     /* Immagine di sfondo modificabile */
     background-size: cover;
     background-position: center;
